@@ -1,4 +1,4 @@
-package com.codecool.app.helpers;
+package helpers;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,16 +16,8 @@ public class PasswordGenerator {
         if(parsedRequest.get("chars") != null){
             this.chars = Integer.parseInt(parsedRequest.get("chars").trim());
         }
-        if(parsedRequest.get("numbers") != null){
-            this.numbers = true;
-        } else {
-            this.numbers =false;
-        }
-        if(parsedRequest.get("special") != null){
-            this.special = true;
-        } else {
-            this.special =false;
-        }
+        this.numbers = (parsedRequest.get("numbers") != null);
+        this.special = (parsedRequest.get("special") != null);
         if(parsedRequest.get("upper") != null){
             this.upperCase = true;
         } else {

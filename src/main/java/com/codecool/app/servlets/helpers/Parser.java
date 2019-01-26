@@ -1,4 +1,4 @@
-package com.codecool.app.helpers;
+package helpers;
 
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;

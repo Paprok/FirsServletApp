@@ -1,17 +1,21 @@
-package com.codecool.app.servlets;
+//package com.codecool.app.servlets;
 
-import com.codecool.app.helpers.PasswordGenerator;
-import com.codecool.app.helpers.ServletHelper;
+//import com.codecool.app.helpers.PasswordGenerator;
+//import com.codecool.app.helpers.ServletHelper;
+import helpers.PasswordGenerator;
+import helpers.ServletHelper;
 import org.jtwig.JtwigModel;
 import org.jtwig.JtwigTemplate;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.util.Map;
 
+@WebServlet(urlPatterns = {"/generate"})
 public class SimpleHttpServlet extends HttpServlet {
     private ServletHelper servletHelper = new ServletHelper();
     private PasswordGenerator passwordGenerator = new PasswordGenerator();

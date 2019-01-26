@@ -1,4 +1,4 @@
-package com.codecool.app.helpers;
+package helpers;
 
 import javax.annotation.ManagedBean;
 import javax.servlet.http.HttpServletRequest;
